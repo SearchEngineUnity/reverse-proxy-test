@@ -1,7 +1,7 @@
 {
-  "name": "demo-centre-mui",
+  "name": "reverse-proxy-test",
   "version": "1.0.0",
-  "description": "This is the demo centre with MUI.",
+  "description": "This is a mono repo for the reverse proxy test.",
   "main": "index.js",
   "scripts": {
     "clean": "lerna run clean",
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SearchEngineUnity/demo-centre-mui.git"
+    "url": "git+https://github.com/SearchEngineUnity/reverse-proxy-test.git"
   },
   "keywords": [
     "demo",
@@ -34,9 +34,9 @@
   "author": "SEU Dev",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SearchEngineUnity/demo-centre-mui/issues"
+    "url": "https://github.com/SearchEngineUnity/reverse-proxy-test/issues"
   },
-  "homepage": "https://github.com/SearchEngineUnity/demo-centre-mui#readme",
+  "homepage": "https://github.com/SearchEngineUnity/reverse-proxy-test#readme",
   "devDependencies": {
     "eslint": "^7.19.0",
     "eslint-config-airbnb": "^18.2.1",
