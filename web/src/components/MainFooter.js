@@ -1,210 +1,155 @@
 import React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
-import { Box, Container, Divider, Grid, Toolbar, Hidden } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'gatsby-theme-material-ui';
-import NavBrand from './NavBrand';
-import ContactInfo from './ContactInfo';
-import SocialMedia from './SocialMedia';
-import FooterGroup from './FooterGroup';
-import FooterItem from './FooterItem';
-
-import { mapNavBrandToProps, mapNavItemToProps, mapNavGroupToProps } from '../lib/mapToProps';
-
-const useStyles = makeStyles((theme) => ({
-  divider: {
-    backgroundColor: theme.palette.common.white,
-  },
-  grow: {
-    flexGrow: 1,
-  },
-  copyright: {
-    mr: theme.spacing(1),
-  },
-}));
-
-const divStyle = {
-  display: 'none',
-};
-
-const MainFooter = ({ data }) => {
-  const classes = useStyles();
-  const { sanityCompanyInfo: companyInfo, sanityNavMenu: footerMenu } = data;
-  const { menuArray } = footerMenu;
-
-  return (
-    <>
-      {data.sanityNavMenu && (
-        <Box
-          component="footer"
-          color="common.white"
-          bgcolor="common.black"
-          fontSize={14}
-          pt={2}
-          style={divStyle}
-        >
-          <Container maxWidth="lg">
-            <Grid container spacing={3}>
-              {menuArray.map((group) => (
-                <React.Fragment key={group._key}>
-                  {group.menuGroup.map((item) => {
-                    switch (item._type) {
-                      case 'navBrand':
-                        return (
-                          <Grid item xs={12} md={3} lg={3} key={item._key}>
-                            <Box my={2}>
-                              <NavBrand {...mapNavBrandToProps(item)} />
-                              <ContactInfo />
-                              <Hidden mdUp>
-                                <SocialMedia />
-                              </Hidden>
-                            </Box>
-                          </Grid>
-                        );
-                      case 'navItem':
-                        return (
-                          <Hidden smDown key={item._key}>
-                            <Grid item xs={12} md={3} lg={3}>
-                              <FooterItem {...mapNavItemToProps(item)} />
-                            </Grid>
-                          </Hidden>
-                        );
-                      case 'navGroup':
-                        return (
-                          <Hidden smDown key={item._key}>
-                            <Grid item xs={12} md={3} lg={3}>
-                              <FooterGroup {...mapNavGroupToProps(item)} />
-                            </Grid>
-                          </Hidden>
-                        );
-                      default:
-                        return <div key={item._key}>under construction</div>;
-                    }
-                  })}
-                </React.Fragment>
-              ))}
-            </Grid>
-          </Container>
-          <Divider className={classes.divider} />
-          <Container maxWidth="lg">
-            <Toolbar disableGutters>
-              <Box component="p" mr={2}>
-                &#0169; Copyright {new Date().getFullYear()} {companyInfo.name}
-              </Box>
-              <Link to="https://google.com">Privacy Policy</Link>
-              <Hidden smDown>
-                <div className={classes.grow} />
-                <SocialMedia />
-              </Hidden>
-            </Toolbar>
-          </Container>
-        </Box>
-      )}
-    </>
-  );
-};
 
 export default function Footer(props) {
   return (
-    <StaticQuery
-      query={graphql`
-        {
-          sanityNavMenu(type: { eq: "mainFooter" }) {
-            type
-            menuArray {
-              _key
-              menuGroup {
-                ... on SanityNavBrand {
-                  _key
-                  _type
-                  brandGroup {
-                    height
-                    type
-                    brand {
-                      title
-                      _id
-                      logo {
-                        asset {
-                          url
-                        }
-                      }
-                    }
-                  }
-                  nav {
-                    slug {
-                      current
-                    }
-                  }
-                }
-                ... on SanityNavGroup {
-                  _key
-                  _type
-                  title
-                  nav {
-                    ... on SanitySpGuide {
-                      slug {
-                        current
-                      }
-                      _id
-                    }
-                    ... on SanityPage {
-                      slug {
-                        current
-                      }
-                      _id
-                    }
-                  }
-                  group {
-                    title
-                    isButton
-                    icon
-                    nav {
-                      ... on SanityPage {
-                        slug {
-                          current
-                        }
-                      }
-                      ... on SanitySpGuide {
-                        slug {
-                          current
-                        }
-                      }
-                    }
-                    _key
-                  }
-                }
-                ... on SanityNavItem {
-                  _key
-                  _type
-                  isButton
-                  title
-                  nav {
-                    ... on SanityPage {
-                      slug {
-                        current
-                      }
-                    }
-                    ... on SanitySpGuide {
-                      slug {
-                        current
-                      }
-                    }
-                  }
-                }
-                ... on SanityNavPhone {
-                  _key
-                  _type
-                  text
-                }
-              }
-            }
-          }
-          sanityCompanyInfo {
-            name
-          }
-        }
-      `}
-      render={(data) => <MainFooter data={data} {...props} />}
-    />
+    <div className="footer-container" data-sticky-footer="">
+      <footer className="footer">
+        <div className="large-9 columns">
+          <section id="nav_menu-2" className="large-3 columns widget widget_nav_menu">
+            <h6>Partner With Us</h6>
+            <div className="menu-partner-with-us-container">
+              <ul id="menu-partner-with-us" className="menu">
+                <li
+                  id="menu-item-149"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-149"
+                >
+                  <a href="https://techboomers.com/library-partners">Library Partners</a>
+                </li>
+                <li
+                  id="menu-item-153"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-153"
+                >
+                  <a href="https://techboomers.com/tech-trainers">Tech Trainers</a>
+                </li>
+                <li
+                  id="menu-item-151"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"
+                >
+                  <a href="https://techboomers.com/marketing-designs">Marketing Designs</a>
+                </li>
+                <li
+                  id="menu-item-152"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-152"
+                >
+                  <a href="https://techboomers.com/partner-newsletter">Partner Newsletter</a>
+                </li>
+                <li
+                  id="menu-item-150"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-150"
+                >
+                  <a href="https://techboomers.com/link-to-us">Link To Us</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-3" className="large-3 columns widget widget_nav_menu">
+            <h6>About Us</h6>
+            <div className="menu-about-us-container">
+              <ul id="menu-about-us" className="menu">
+                <li
+                  id="menu-item-154"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"
+                >
+                  <a href="https://techboomers.com/contact-us">Contact Us</a>
+                </li>
+                <li
+                  id="menu-item-158"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-158"
+                >
+                  <a href="https://techboomers.com/who-we-are">Who We Are</a>
+                </li>
+                <li
+                  id="menu-item-25030"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-25030"
+                >
+                  <a href="https://techboomers.com/how-to-support-techboomers">How To Support Us</a>
+                </li>
+                <li
+                  id="menu-item-156"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-156"
+                >
+                  <a href="https://techboomers.com/media-kit">Media Kit</a>
+                </li>
+                <li
+                  id="menu-item-155"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-155"
+                >
+                  <a href="https://techboomers.com/in-the-news">In the News</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-4" className="large-3 columns widget widget_nav_menu">
+            <h6>Free Course Content</h6>
+            <div className="menu-free-course-content-container">
+              <ul id="menu-free-course-content" className="menu">
+                <li
+                  id="menu-item-161"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"
+                >
+                  <a href="https://techboomers.com/courses">Course Directory</a>
+                </li>
+                <li
+                  id="menu-item-160"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"
+                >
+                  <a href="https://techboomers.com/post-our-articles">Post Our Articles</a>
+                </li>
+                <li
+                  id="menu-item-159"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"
+                >
+                  <a href="https://techboomers.com/creative-commons">Creative Commons</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section id="nav_menu-5" className="large-3 columns widget widget_nav_menu">
+            <h6>Legal Stuff</h6>
+            <div className="menu-legal-stuff-container">
+              <ul id="menu-legal-stuff" className="menu">
+                <li
+                  id="menu-item-164"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-164"
+                >
+                  <a href="https://techboomers.com/how-to-support-techboomers">Financial Support</a>
+                </li>
+                <li
+                  id="menu-item-163"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-163"
+                >
+                  <a href="https://techboomers.com/privacy-policy">Privacy Policy</a>
+                </li>
+                <li
+                  id="menu-item-162"
+                  className="menu-item menu-item-type-post_type menu-item-object-page menu-item-162"
+                >
+                  <a href="https://techboomers.com/terms">Terms and Conditions</a>
+                </li>
+              </ul>
+            </div>
+          </section>{' '}
+        </div>
+        <div className="large-3 columns footer-info">
+          <img
+            src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/techboomers-footer-logo.png"
+            alt="techboomers logo"
+          />
+          <p className="small">© 2018 — Techboomers — All Rights Reserved</p>
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+            <img
+              alt="Creative Commons License"
+              style={{ borderWidth: '0' }}
+              src="https://licensebuttons.net/l/by-nc/4.0/80x15.png"
+            />
+          </a>
+          <br />
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
+            Creative Commons
+          </a>{' '}
+          - Share with attribution.
+        </div>
+      </footer>
+    </div>
   );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Typography, Grid, Box } from '@material-ui/core';
 import ImgBlock from '../FluidImgBlock';
-import Subtitle from '../block-contents/HeroSubtitleSerializer';
+import Subtitle from '../block-contents/H1SubtitleSerializer';
 import ProgressBar from '../ScrollProgressBar';
 import { mapFluidImgBlockToProps } from '../../lib/mapToProps';
 
@@ -18,7 +18,7 @@ function GuideHero({ h1, subtitle, date, image }) {
               <Typography variant="h1" gutterBottom>
                 {h1}
               </Typography>
-              <Subtitle blocks={subtitle} />
+              {subtitle && <Subtitle blocks={subtitle} />}
               <br />
               {lastUpdatedDate && (
                 <Box fontSize="0.775rem" fontWeight={600} component="p">

@@ -2,6 +2,7 @@ import React from 'react';
 // import { Container, Typography, Paper, Box, Button } from '@material-ui/core';
 import { Container, Typography, Card, CardContent, CardMedia, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import Layout from '../containers/layout';
 // import { Link } from "gatsby"
 // import { Link } from 'gatsby-theme-material-ui';
 // import styled from 'styled-components';
@@ -39,119 +40,120 @@ const Page = () => {
   const classes = useStyles();
 
   return (
-    <Container maxWidth="md">
-      <br />
-      <br />
-      <br />
-      <br />
-      <Grid container spacing={4}>
-        <Grid item lg={4}>
-          <Card style={{ height: '100%' }}>
-            <CardContent>
-              <h2>The Psychology of choosing house paint</h2>
-              <Typography component="p" color="textSecondary">
-                By Holly Gronau 17/08/2021
-              </Typography>
-              <br />
-              <Typography component="p" variant="body2">
-                Whether you are painting your home to prepare it for sale, or simply to make it more
-                attractive for your own enjoyment, choosing the right colour is important.
-              </Typography>
-            </CardContent>
-            <CardMedia
-              className={classes.media}
-              image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
-            />
-          </Card>
+    <Layout>
+      <Container maxWidth="md">
+        <br />
+        <br />
+        <br />
+        <br />
+        <Grid container spacing={4}>
+          <Grid item lg={4}>
+            <Card style={{ height: '100%' }}>
+              <CardContent>
+                <h2>The Psychology of choosing house paint</h2>
+                <Typography component="p" color="textSecondary">
+                  By Holly Gronau 17/08/2021
+                </Typography>
+                <br />
+                <Typography component="p" variant="body2">
+                  Whether you are painting your home to prepare it for sale, or simply to make it
+                  more attractive for your own enjoyment, choosing the right colour is important.
+                </Typography>
+              </CardContent>
+              <CardMedia
+                className={classes.media}
+                image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
+              />
+            </Card>
+          </Grid>
+          <Grid item lg={4}>
+            <Card style={{ height: '100%' }}>
+              <CardContent>
+                <h2>The Psychology of choosing house paint</h2>
+                <Typography component="p" color="textSecondary">
+                  By Holly Gronau 17/08/2021
+                </Typography>
+                <br />
+                <Typography component="p" variant="body2">
+                  Whether you are painting your home to prepare it for sale, or simply to make it
+                  more attractive for your own enjoyment, choosing the right colour is important.
+                </Typography>
+              </CardContent>
+              <CardMedia
+                className={classes.media}
+                image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
+              />
+            </Card>
+          </Grid>
+          <Grid item lg={4}>
+            <Card style={{ height: '100%' }}>
+              <CardContent>
+                <h2>The Psychology of choosing house paint</h2>
+                <Typography component="p" color="textSecondary">
+                  By Holly Gronau 17/08/2021
+                </Typography>
+                <br />
+                <Typography component="p" variant="body2">
+                  Whether you are painting your home to prepare it for sale, or simply to make it
+                  more attractive for your own enjoyment, choosing the right colour is important.
+                </Typography>
+              </CardContent>
+              <CardMedia
+                className={classes.media}
+                image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
+              />
+            </Card>
+          </Grid>
         </Grid>
-        <Grid item lg={4}>
-          <Card style={{ height: '100%' }}>
-            <CardContent>
-              <h2>The Psychology of choosing house paint</h2>
-              <Typography component="p" color="textSecondary">
-                By Holly Gronau 17/08/2021
-              </Typography>
-              <br />
-              <Typography component="p" variant="body2">
-                Whether you are painting your home to prepare it for sale, or simply to make it more
-                attractive for your own enjoyment, choosing the right colour is important.
-              </Typography>
-            </CardContent>
-            <CardMedia
-              className={classes.media}
-              image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
-            />
-          </Card>
+        <br />
+        <br />
+        <br />
+        <br />
+        <Grid container spacing={4}>
+          <Grid item lg={6}>
+            <Card style={{ height: '100%' }}>
+              <CardContent>
+                <h2>The Psychology of choosing house paint</h2>
+                <Typography component="p" color="textSecondary">
+                  By Holly Gronau 17/08/2021
+                </Typography>
+                <br />
+                <Typography component="p" variant="body2">
+                  Whether you are painting your home to prepare it for sale, or simply to make it
+                  more attractive for your own enjoyment, choosing the right colour is important. A
+                  colour is not just a matter of taste, it is also, to a large extent, about the
+                  emotions it elicits.
+                </Typography>
+              </CardContent>
+              <CardMedia
+                className={classes.media}
+                image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
+              />
+            </Card>
+          </Grid>
+          <Grid item lg={6}>
+            <Card style={{ height: '100%' }}>
+              <CardContent>
+                <h2>The Psychology of choosing house paint</h2>
+                <Typography component="p" color="textSecondary">
+                  By Holly Gronau 17/08/2021
+                </Typography>
+                <br />
+                <Typography component="p" variant="body2">
+                  Whether you are painting your home to prepare it for sale, or simply to make it
+                  more attractive for your own enjoyment, choosing the right colour is important. A
+                  colour is not just a matter of taste, it is also, to a large extent, about the
+                  emotions it elicits.
+                </Typography>
+              </CardContent>
+              <CardMedia
+                className={classes.media}
+                image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
+              />
+            </Card>
+          </Grid>
         </Grid>
-        <Grid item lg={4}>
-          <Card style={{ height: '100%' }}>
-            <CardContent>
-              <h2>The Psychology of choosing house paint</h2>
-              <Typography component="p" color="textSecondary">
-                By Holly Gronau 17/08/2021
-              </Typography>
-              <br />
-              <Typography component="p" variant="body2">
-                Whether you are painting your home to prepare it for sale, or simply to make it more
-                attractive for your own enjoyment, choosing the right colour is important.
-              </Typography>
-            </CardContent>
-            <CardMedia
-              className={classes.media}
-              image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
-            />
-          </Card>
-        </Grid>
-      </Grid>
-      <br />
-      <br />
-      <br />
-      <br />
-      <Grid container spacing={4}>
-        <Grid item lg={6}>
-          <Card style={{ height: '100%' }}>
-            <CardContent>
-              <h2>The Psychology of choosing house paint</h2>
-              <Typography component="p" color="textSecondary">
-                By Holly Gronau 17/08/2021
-              </Typography>
-              <br />
-              <Typography component="p" variant="body2">
-                Whether you are painting your home to prepare it for sale, or simply to make it more
-                attractive for your own enjoyment, choosing the right colour is important. A colour
-                is not just a matter of taste, it is also, to a large extent, about the emotions it
-                elicits.
-              </Typography>
-            </CardContent>
-            <CardMedia
-              className={classes.media}
-              image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
-            />
-          </Card>
-        </Grid>
-        <Grid item lg={6}>
-          <Card style={{ height: '100%' }}>
-            <CardContent>
-              <h2>The Psychology of choosing house paint</h2>
-              <Typography component="p" color="textSecondary">
-                By Holly Gronau 17/08/2021
-              </Typography>
-              <br />
-              <Typography component="p" variant="body2">
-                Whether you are painting your home to prepare it for sale, or simply to make it more
-                attractive for your own enjoyment, choosing the right colour is important. A colour
-                is not just a matter of taste, it is also, to a large extent, about the emotions it
-                elicits.
-              </Typography>
-            </CardContent>
-            <CardMedia
-              className={classes.media}
-              image="https://clintwillies.ca/wps/rest/13766/post/7228167/image.jpg"
-            />
-          </Card>
-        </Grid>
-      </Grid>
-      {/* <Paper className={classes.paper} elevation={5}>
+        {/* <Paper className={classes.paper} elevation={5}>
         <Box p={0.5}>
           <Typography variant="h1">
             Check out my <Link to="/blog">blog</Link>
@@ -236,11 +238,12 @@ const Page = () => {
           </Button>
         </div>
       </div> */}
-      <br />
-      <br />
-      <br />
-      <br />
-    </Container>
+        <br />
+        <br />
+        <br />
+        <br />
+      </Container>
+    </Layout>
   );
 };
 

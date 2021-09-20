@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "2xtgdu8l",
+    "projectId": "ao6csa02",
     "dataset": "production"
   },
   "project": {
-    "name": "Demo Centre MUI"
+    "name": "Reverse Proxy Test"
   },
   "plugins": [
     "@sanity/base",

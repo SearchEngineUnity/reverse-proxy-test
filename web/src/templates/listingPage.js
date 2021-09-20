@@ -845,8 +845,6 @@ const StructuredPage = ({ data, location, pageContext }) => {
 
   const listingItems = allListItems.slice((currentpage - 1) * limit, currentpage * limit);
 
-  console.log(currentpage);
-
   return (
     <Layout location={location}>
       <Seo {...mapSeoToProps(data.page, data.site.siteMetadata.siteUrl, type)} />
