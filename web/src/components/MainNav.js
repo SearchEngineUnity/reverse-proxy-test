@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/mouse-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 import Hidden from '@material-ui/core/Hidden';
 import Collapse from '@material-ui/core/Collapse';
 
-export default function MyMainNav(props) {
+export default function MyMainNav() {
   const [open, setOpen] = useState(false);
   const [openShoppingOnline, setOpenShoppingOnline] = useState(false);
   const [openSocialWebsitesApps, setOpenSocialWebsitesApps] = useState(false);
@@ -43,16 +45,12 @@ export default function MyMainNav(props) {
   };
 
   const handleMouseOver = (event) => {
-    console.log(event.currentTarget.getAttribute('data-category'));
-
     setActiveCategory(event.currentTarget.getAttribute('data-category'));
   };
 
-  const handleMouseLeave = (event) => {
+  const handleMouseLeave = () => {
     setActiveCategory(null);
   };
-
-  console.log(activeCategory);
 
   return (
     <header className="site-header" role="banner">
@@ -560,7 +558,6 @@ export default function MyMainNav(props) {
                 Access 100+ Free Courses
               </a>
             </li>
-            {/* classes that get added when active current-category-ancestor current-menu-ancestor current-menu-parent current-category-parent */}
             <li
               data-category="5"
               className={`${
@@ -568,7 +565,7 @@ export default function MyMainNav(props) {
               } menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children online-shopping-sites-apps mega-menu`}
               data-menuloaded="true"
               onMouseOver={(e) => handleMouseOver(e)}
-              onMouseLeave={(e) => handleMouseLeave(e)}
+              onMouseLeave={handleMouseLeave}
             >
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a className="navlink" href="#">
@@ -847,7 +844,7 @@ export default function MyMainNav(props) {
               } menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children entertainment-websites-apps mega-menu`}
               data-menuloaded="true"
               onMouseOver={(e) => handleMouseOver(e)}
-              onMouseLeave={(e) => handleMouseLeave(e)}
+              onMouseLeave={handleMouseLeave}
             >
               <a className="navlink" href="#">
                 Online Entertainment
@@ -1135,7 +1132,7 @@ export default function MyMainNav(props) {
               } menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children social-websites-apps mega-menu`}
               data-menuloaded="true"
               onMouseOver={(e) => handleMouseOver(e)}
-              onMouseLeave={(e) => handleMouseLeave(e)}
+              onMouseLeave={handleMouseLeave}
             >
               <a className="navlink" href="#">
                 Social Websites and Apps
@@ -1418,7 +1415,7 @@ export default function MyMainNav(props) {
               } menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children useful-websites-apps mega-menu`}
               data-menuloaded="true"
               onMouseOver={(e) => handleMouseOver(e)}
-              onMouseLeave={(e) => handleMouseLeave(e)}
+              onMouseLeave={handleMouseLeave}
             >
               <a className="navlink" href="#">
                 Useful Websites and Apps
@@ -1699,7 +1696,7 @@ export default function MyMainNav(props) {
               } menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children technology-basics mega-menu`}
               data-menuloaded="true"
               onMouseOver={(e) => handleMouseOver(e)}
-              onMouseLeave={(e) => handleMouseLeave(e)}
+              onMouseLeave={handleMouseLeave}
             >
               <a className="navlink" href="#">
                 Technology Basics
