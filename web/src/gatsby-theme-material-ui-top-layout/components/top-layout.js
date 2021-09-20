@@ -24,6 +24,15 @@ const ThemeProvider = ({ children, data }) => {
         },
       },
     },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 640,
+        md: 960,
+        lg: 1280,
+        xl: 1920,
+      },
+    },
     palette: {
       common: {
         black: determinColor(palette?.black?.color) || '#000',

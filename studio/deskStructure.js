@@ -106,7 +106,7 @@ const SectionColorPreview = ({ document }) => {
 
 export default () =>
   S.list()
-    .title('Demo Centre')
+    .title('Reverse Proxy Website')
     .items([
       S.listItem()
         .title('Site Settings')
