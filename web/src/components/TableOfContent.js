@@ -84,7 +84,7 @@ function Toc({ toc }) {
         Table of Contents
       </Typography>
       {headings.titles.map(({ title, id }, index) => (
-        <Box mb={1} fontSize="body2.fontSize" display="block" key={id}>
+        <Box mb={1.5} fontSize="body1.fontSize" lineHeight="1" display="block" key={id}>
           <Link
             to={`#${id}`}
             className={`${active === index ? classes.activeLink : null} ${classes.link}`}

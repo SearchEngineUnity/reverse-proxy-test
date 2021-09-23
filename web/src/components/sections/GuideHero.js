@@ -21,7 +21,7 @@ function GuideHero({ h1, subtitle, date, image }) {
               {subtitle && <Subtitle blocks={subtitle} />}
               <br />
               {lastUpdatedDate && (
-                <Box fontSize="0.775rem" fontWeight={600} component="p">
+                <Box fontSize="0.8rem" fontWeight={400} component="p" fontStyle="italic">
                   Last updated: {lastUpdatedDate.toLocaleDateString('en-US', options)}
                 </Box>
               )}
