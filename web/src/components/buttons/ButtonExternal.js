@@ -4,8 +4,16 @@ import { createMuiTheme, ThemeProvider, makeStyles } from '@material-ui/core/sty
 import { determinColor } from '../../lib/helperFunctions';
 
 const useStyles = makeStyles((theme) => ({
-  size: {
+  btn: {
     padding: (props) => props.padding,
+    '&:hover': {
+      color: (props) => props.contrastTextColor,
+      'text-decoration': 'none',
+    },
+    '&:focus': {
+      color: (props) => props.contrastTextColor,
+      'text-decoration': 'none',
+    },
   },
 }));
 
@@ -37,6 +45,21 @@ function ButtonExternal({
         contrastText: contrastTextColor,
       },
     },
+    // overrides: {
+    //   MuiButton: {
+    //     root: {
+    //       color: 'green',
+    //       '&:hover': {
+    //         color: 'green',
+    //         'text-decoration': 'none',
+    //       },
+    //       '&:focus': {
+    //         color: contrastTextColor,
+    //         'text-decoration': 'none',
+    //       },
+    //     },
+    //   },
+    // },
     shape: {
       borderRadius: borderRadius || '4px',
     },
@@ -52,7 +75,7 @@ function ButtonExternal({
     },
   });
 
-  const classes = useStyles({ padding });
+  const classes = useStyles({ padding, contrastTextColor });
   const { href, newTab, noreferrer } = link[0];
 
   return (
@@ -66,7 +89,7 @@ function ButtonExternal({
           disableFocusRipple={disableFocusRipple}
           disableRipple={disableRipple}
           fullWidth={fullWidth}
-          className={classes.size}
+          className={classes.btn}
           target={newTab ? '_blank' : ''}
           rel={`${newTab ? 'noopener' : ''} ${noreferrer ? 'noreferrer' : ''}`}
           href={href}

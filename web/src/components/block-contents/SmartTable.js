@@ -52,10 +52,11 @@ function SmartTable({ smartTable }) {
           {colgroup && (
             <colgroup>
               {colgroup.map((col) =>
-                col.width !== 0 ? <col style={{ width: `${col.width}%` }} /> : <col />,
+                col.width !== 0 ? <col span="1" width={col.width} /> : <col />,
               )}
             </colgroup>
           )}
+
           {colHeading && (
             <TableHead>
               <TableRow key={thead._key}>

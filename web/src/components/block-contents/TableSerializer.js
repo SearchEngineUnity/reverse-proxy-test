@@ -9,7 +9,7 @@ import InternalGlobal from '../link/LinkInternalGlobal';
 import InternalLocal from '../link/LinkInternalLocal';
 
 const NoIndentUl = styled.ul`
-  list-style-type: disk;
+  list-style-type: disc;
   margin-left: 1.4rem;
   padding-left: 0;
   margin-top: 0;
