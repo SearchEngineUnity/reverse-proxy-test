@@ -77,11 +77,11 @@ const MyLayout = ({ children }) => (
         src="https://techboomers.com/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.7"
         id="regenerator-runtime-js"
       /> */}
-      <script
+      {/* <script
         type="text/javascript"
         src="https://techboomers.com/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
         id="wp-polyfill-js"
-      />
+      /> */}
       {/* <script
         async="async"
         type="text/javascript"
