@@ -63,6 +63,7 @@ const SPGuide = ({ data, location }) => {
     <Layout location={location}>
       <Seo {...mapSeoToProps(data.guide, data.site.siteMetadata.siteUrl, type)} />
       <GuideHero {...mapGuideHeroToProps(data.guide)} />
+      {alert('this is holly')}
       <Box my={3}>
         <Container maxWidth="lg">
           <Grid container spacing={3}>
