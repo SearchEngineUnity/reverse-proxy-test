@@ -59,7 +59,7 @@ export const query = graphql`
 const SPGuide = ({ data, location }) => {
   const type = 'guide';
 
-  console.log(alert('holly holly holly!'));
+  console.log(Math.random(8));
   return (
     <Layout location={location}>
       <Seo {...mapSeoToProps(data.guide, data.site.siteMetadata.siteUrl, type)} />
