@@ -31,7 +31,7 @@ export const useSpGuides = () => {
       image: tileImage._rawAsset,
       text: tileText,
       date: displayDate,
-      url: slug.current,
+      url: `blog/${slug.current}`,
     }),
   );
 
