@@ -74,7 +74,7 @@ async function createListingPages(actions, graphql) {
     const numPages = Math.ceil(totalCount / numPerPage);
     Array.from({ length: numPages }).forEach((_, i) => {
       actions.createPage({
-        path: i === 0 ? `/${page.node.slug.current}` : `/${page.node.slug.current}/${i + 1}`,
+        path: i === 0 ? `/` : `/${i + 1}`,
         component: path.resolve(`./src/templates/listingPage.js`),
         context: {
           listType,
@@ -108,7 +108,7 @@ async function createGuide(actions, graphql) {
   const guides = data.allSanitySpGuide.edges;
   guides.forEach((guide) => {
     actions.createPage({
-      path: `/blog/${guide.node.slug.current}`,
+      path: `/${guide.node.slug.current}`,
       component: path.resolve(`./src/templates/spGuide.js`),
       context: {
         slug: guide.node.slug.current,
