@@ -17,7 +17,7 @@ module.exports = {
   siteMetadata: {
     siteUrl,
   },
-  pathPrefix: `/blog`,
+  // pathPrefix: `/blog`,
   plugins: [
     {
       resolve: `gatsby-theme-material-ui`,
