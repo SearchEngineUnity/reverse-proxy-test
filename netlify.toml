@@ -1,6 +1,6 @@
 [build]
   base = "web/"
-  command = "npm run build:move"
+  command = "npm run build:app"
   publish = "public"
 
 [context.staging.environment]
