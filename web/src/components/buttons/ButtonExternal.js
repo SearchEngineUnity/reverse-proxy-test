@@ -78,6 +78,12 @@ function ButtonExternal({
   const classes = useStyles({ padding, contrastTextColor });
   const { href, newTab, noreferrer } = link[0];
 
+  const style = {
+    ':hover': {
+      color: 'white',
+    },
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Box textAlign={alignment} py={3}>
@@ -93,6 +99,7 @@ function ButtonExternal({
           target={newTab ? '_blank' : ''}
           rel={`${newTab ? 'noopener' : ''} ${noreferrer ? 'noreferrer' : ''}`}
           href={href}
+          style={style}
         >
           {text}
         </Button>
