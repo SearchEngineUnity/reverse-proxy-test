@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, Button } from 'gatsby-theme-material-ui';
-import Box from '@material-ui/core/Box';
+import { Box } from '@material-ui/core';
 
 function FooterItem({ url, title, isButton }) {
   return (

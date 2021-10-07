@@ -1,23 +1,22 @@
 import React from 'react';
 import { navigate } from 'gatsby';
 import Box from '@material-ui/core/Box';
-import MenuIcon from '@material-ui/icons/Menu';
+import { Menu, Close, ExpandLess, ExpandMore } from '@material-ui/icons';
 import { Link, IconButton } from 'gatsby-theme-material-ui';
 import { makeStyles } from '@material-ui/core/styles';
-import Icon from '@material-ui/core/Icon';
-import Dialog from '@material-ui/core/Dialog';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItem from '@material-ui/core/ListItem';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import CloseIcon from '@material-ui/icons/Close';
-import Slide from '@material-ui/core/Slide';
-import Collapse from '@material-ui/core/Collapse';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import {
+  Icon,
+  Dialog,
+  ListItemText,
+  ListItemIcon,
+  ListItem,
+  List,
+  Divider,
+  AppBar,
+  Toolbar,
+  Slide,
+  Collapse,
+} from '@material-ui/core/Icon';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -71,7 +70,7 @@ function MainNavHamburger({ menu, brand }) {
   return (
     <Box display={{ xs: 'block', sm: 'block', md: 'none', lg: 'none', xl: 'none' }}>
       <IconButton edge="end" color="inherit" aria-label="menu" onClick={handleClickOpen}>
-        <MenuIcon />
+        <Menu />
       </IconButton>
       <Dialog
         fullScreen
@@ -93,7 +92,7 @@ function MainNavHamburger({ menu, brand }) {
               </Link>
             </Box>
             <IconButton edge="end" color="inherit" onClick={handleClose} aria-label="close">
-              <CloseIcon />
+              <Close />
             </IconButton>
           </Toolbar>
         </AppBar>

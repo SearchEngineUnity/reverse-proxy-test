@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '@material-ui/core/Box';
+import { Box } from '@material-ui/core';
 import { Link } from 'gatsby-theme-material-ui';
 
 function NavBrand({ url, brandGroup, location }) {

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IconButton, Tooltip } from '@material-ui/core';
-import LinkIcon from '@material-ui/icons/Link';
+import { Link as LinkIcon } from '@material-ui/icons';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { makeStyles } from '@material-ui/core/styles';
 

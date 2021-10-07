@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import EmojiObjectsOutlinedIcon from '@material-ui/icons/EmojiObjectsOutlined';
+import { EmojiObjectsOutlined } from '@material-ui/icons';
 import TextContent from '../HighlightBoxSerializer';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +26,7 @@ function HighlightDidYouKnow({ blockContent, id }) {
   return (
     <Box component={Paper} variant="outlined" key={id} className={classes.root} my={2} p={2}>
       <Typography component="p" variant="h4" className={classes.text}>
-        <EmojiObjectsOutlinedIcon className={classes.icon} /> Did You Know
+        <EmojiObjectsOutlined className={classes.icon} /> Did You Know
       </Typography>
       <TextContent blocks={blockContent} />
     </Box>

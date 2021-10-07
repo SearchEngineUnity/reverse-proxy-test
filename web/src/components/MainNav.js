@@ -3,8 +3,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
-import Hidden from '@material-ui/core/Hidden';
-import Collapse from '@material-ui/core/Collapse';
+import { Hidden, Collapse } from '@material-ui/core';
 
 export default function MyMainNav() {
   const [open, setOpen] = useState(false);

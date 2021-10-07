@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import { Link } from 'gatsby-theme-material-ui';
+import { Link } from '@material-ui/core';
 
 function InternalLocal({ href, children, newTab, className }) {
   return (
