@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React from 'react';
-import Link from '@material-ui/core/Link';
+import { Link } from '@material-ui/core';
 
 function ExternalLink({ href, children, noreferrer, newTab, className }) {
   return (

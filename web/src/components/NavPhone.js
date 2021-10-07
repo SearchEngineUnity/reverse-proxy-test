@@ -1,7 +1,6 @@
 import React from 'react';
 import { StaticQuery, graphql } from 'gatsby';
-import Box from '@material-ui/core/Box';
-import Link from '@material-ui/core/Link';
+import { Box, Link } from '@material-ui/core';
 
 function NavPhone({ text, data }) {
   return (

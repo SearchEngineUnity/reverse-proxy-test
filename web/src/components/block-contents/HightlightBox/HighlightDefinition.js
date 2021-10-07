@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
+import { MenuBook } from '@material-ui/icons';
 import TextContent from '../HighlightBoxSerializer';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +26,7 @@ function HighlightDefinition({ blockContent, id }) {
   return (
     <Box component={Paper} variant="outlined" key={id} className={classes.root} my={2} p={2}>
       <Typography component="p" variant="h4" className={classes.text}>
-        <MenuBookIcon className={classes.icon} /> Definition
+        <MenuBook className={classes.icon} /> Definition
       </Typography>
       <TextContent blocks={blockContent} />
     </Box>

@@ -29,6 +29,24 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-import',
+      options: {
+        libraryName: '@material-ui/core',
+        // Use "'libraryDirectory': ''," if your bundler does not support ES modules
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-import',
+      options: {
+        libraryName: '@material-ui/icons',
+        // Use "'libraryDirectory': ''," if your bundler does not support ES modules
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+    },
+    {
       resolve: `gatsby-theme-material-ui`,
       options: {
         webFontsConfig: {

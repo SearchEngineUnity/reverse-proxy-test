@@ -1,12 +1,7 @@
 import React from 'react';
 import { IconButton } from 'gatsby-theme-material-ui';
 import { StaticQuery, graphql } from 'gatsby';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import PinterestIcon from '@material-ui/icons/Pinterest';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import YouTubeIcon from '@material-ui/icons/YouTube';
+import { Facebook, Twitter, Instagram, Pinterest, LinkedIn, YouTube } from '@material-ui/icons';
 
 const ContactInfo = ({ data }) => {
   const { allSanitySocialInfo: socials } = data;
@@ -17,17 +12,17 @@ const ContactInfo = ({ data }) => {
         const iconSelector = (key) => {
           switch (key) {
             case 'facebook':
-              return <FacebookIcon />;
+              return <Facebook />;
             case 'twitter':
-              return <TwitterIcon />;
+              return <Twitter />;
             case 'instagram':
-              return <InstagramIcon />;
+              return <Instagram />;
             case 'pinterest':
-              return <PinterestIcon />;
+              return <Pinterest />;
             case 'linkedin':
-              return <LinkedInIcon />;
+              return <LinkedIn />;
             case 'youtube':
-              return <YouTubeIcon />;
+              return <YouTube />;
 
             default:
               return <div>under construction</div>;

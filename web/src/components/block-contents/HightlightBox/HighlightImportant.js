@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import ErrorOutlineOutlinedIcon from '@material-ui/icons/ErrorOutlineOutlined';
+import { ErrorOutlineOutlined } from '@material-ui/icons';
 import TextContent from '../HighlightBoxSerializer';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +26,7 @@ function HighlightImportant({ blockContent, id }) {
   return (
     <Box component={Paper} variant="outlined" key={id} className={classes.root} my={2} p={2}>
       <Typography component="p" variant="h4" className={classes.text}>
-        <ErrorOutlineOutlinedIcon className={classes.icon} /> Important
+        <ErrorOutlineOutlined className={classes.icon} /> Important
       </Typography>
       <TextContent blocks={blockContent} />
     </Box>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Paper, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import WarningOutlinedIcon from '@material-ui/icons/WarningOutlined';
+import { WarningOutlined } from '@material-ui/icons';
 import TextContent from '../HighlightBoxSerializer';
 
 const useStyles = makeStyles((theme) => ({
@@ -26,7 +26,7 @@ function HighlightWarning({ blockContent, id }) {
   return (
     <Box component={Paper} variant="outlined" key={id} className={classes.root} my={2} p={2}>
       <Typography component="p" variant="h4" className={classes.text}>
-        <WarningOutlinedIcon className={classes.icon} /> Warning
+        <WarningOutlined className={classes.icon} /> Warning
       </Typography>
       <TextContent blocks={blockContent} />
     </Box>
