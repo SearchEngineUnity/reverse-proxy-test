@@ -60,13 +60,13 @@ const MyLayout = ({ children }) => (
         type="text/css"
         media="all"
       /> */}
-      <link
+      {/* <link
         rel="stylesheet"
         id="main-stylesheet-css"
         href="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/css/app.css?ver=2.10.63"
         type="text/css"
         media="all"
-      />
+      /> */}
       {/* <link
         rel="stylesheet"
         id="dry_awp_theme_style-css"
