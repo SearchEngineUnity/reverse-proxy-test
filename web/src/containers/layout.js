@@ -14,11 +14,11 @@ import MainFooter from '../components/MainFooter';
 const MyLayout = ({ children }) => (
   <>
     <Helmet>
-      <script
+      {/* <script
         id="cookieyes"
         type="text/javascript"
         src="https://cdn-cookieyes.com/client_data/a52e312b51133205942a4eb7/script.js"
-      />
+      /> */}
       <script
         rel="preload"
         src="https://kit.fontawesome.com/e4a269ffa7.js"
