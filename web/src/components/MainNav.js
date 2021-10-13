@@ -74,6 +74,7 @@ export default function MyMainNav() {
                 <img
                   src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/logo-mobile-small.png"
                   alt="techboomers logo"
+                  style={{ objectFit: 'contain' }}
                 />
               </a>
             </span>
