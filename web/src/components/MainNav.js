@@ -480,7 +480,7 @@ export default function MyMainNav() {
             <a href="https://techboomers.com/" rel="home" className="header-home-link">
               <img
                 src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/Logo-Tech-Boomers.png"
-                style={{ maxHeight: '50px' }}
+                style={{ maxHeight: '50px', objectFit: 'contain' }}
                 alt="techboomers logo"
               />
             </a>

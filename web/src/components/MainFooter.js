@@ -134,7 +134,7 @@ export default function Footer(props) {
           <img
             src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/techboomers-footer-logo.png"
             alt="techboomers logo"
-            style={{ objectFit: 'contain' }}
+            style={{ objectFit: 'contain', maxHeight: '50px' }}
           />
           <p className="small">© 2018 — Techboomers — All Rights Reserved</p>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
