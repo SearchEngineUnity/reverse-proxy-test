@@ -14,7 +14,7 @@ import InternalLocal from '../link/LinkInternalLocal';
 import ButtonExternal from '../buttons/ButtonExternal';
 import ButtonInternalGlobal from '../buttons/ButtonInternalGlobal';
 import ButtonInternalLocal from '../buttons/ButtonInternalLocal';
-import ButtonJumpLInk from '../buttons/ButtonJumpLink';
+import ButtonJumpLink from '../buttons/ButtonJumpLink';
 import { mapMuiBtnToProps } from '../../lib/mapToProps';
 
 const NoIndentUl = styled.ul`
@@ -165,7 +165,7 @@ const serializers = {
     btnBlockMui({ node }) {
       switch (node.link[0]._type) {
         case 'jumpLink':
-          return <ButtonJumpLInk {...mapMuiBtnToProps(node)} />;
+          return <ButtonJumpLink {...mapMuiBtnToProps(node)} />;
         case 'internalLocal':
           return <ButtonInternalLocal {...mapMuiBtnToProps(node)} />;
         case 'internalGlobal':
