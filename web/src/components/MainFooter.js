@@ -134,19 +134,20 @@ export default function Footer(props) {
           <img
             src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/techboomers-footer-logo.png"
             alt="techboomers logo"
+            style={{ objectFit: 'contain' }}
           />
           <p className="small">© 2018 — Techboomers — All Rights Reserved</p>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
             <img
               alt="Creative Commons License"
-              style={{ borderWidth: '0' }}
+              style={{ borderWidth: '0', height: '15px', width: '80px' }}
               src="https://licensebuttons.net/l/by-nc/4.0/80x15.png"
             />
           </a>
           <br />
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
             Creative Commons
-          </a>{' '}
+          </a>
           - Share with attribution.
         </div>
       </footer>
