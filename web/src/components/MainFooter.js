@@ -1,4 +1,21 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const AspectRatioBox = styled.div`
+  height: 0;
+  overflow: hidden;
+  padding-top: 174.09px / 50px * 100%;
+  background: white;
+  position: relative;
+`;
+
+const InsideImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
 
 export default function Footer(props) {
   return (
@@ -131,11 +148,13 @@ export default function Footer(props) {
           </section>{' '}
         </div>
         <div className="large-3 columns footer-info">
+          {/* <AspectRatioBox> */}
           <img
+            style={{ height: '100%', width: 'auto', maxHeight: '50px' }}
             src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/techboomers-footer-logo.png"
             alt="techboomers logo"
-            style={{ objectFit: 'contain', maxHeight: '50px' }}
           />
+          {/* </AspectRatioBox> */}
           <p className="small">© 2018 — Techboomers — All Rights Reserved</p>
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">
             <img
