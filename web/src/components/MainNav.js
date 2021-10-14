@@ -72,9 +72,10 @@ export default function MyMainNav() {
             <span className="site-mobile-title title-bar-title">
               <a href="https://techboomers.com/" rel="home">
                 <img
+                  width="105"
+                  height="27"
                   src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/logo-mobile-small.png"
                   alt="techboomers logo"
-                  style={{ height: '100%', width: 'auto', maxHeight: '50px' }}
                 />
               </a>
             </span>
@@ -480,8 +481,9 @@ export default function MyMainNav() {
             <a href="https://techboomers.com/" rel="home" className="header-home-link">
               <img
                 src="https://techboomers.com/wp-content/themes/TechBoomers2018/dist/assets/images/Logo-Tech-Boomers.png"
-                style={{ height: '100%', width: 'auto', maxHeight: '50px' }}
                 alt="techboomers logo"
+                width="250"
+                height="63"
               />
             </a>
           </div>
