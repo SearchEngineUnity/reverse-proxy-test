@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Grid, Box } from '@material-ui/core';
+import { Container, Typography, Grid, Box, Link } from '@material-ui/core';
 import ImgBlock from '../FluidImgBlock';
 import Subtitle from '../block-contents/H1SubtitleSerializer';
 import ProgressBar from '../ScrollProgressBar';
@@ -25,6 +25,14 @@ function GuideHero({ h1, subtitle, date, image }) {
                   Last updated: {lastUpdatedDate.toLocaleDateString('en-US', options)}
                 </Box>
               )}
+              <p>
+                <b>DISCLAIMER:</b> Techboomers independently reviews everything we recommend. When
+                you buy something after clicking on a link to another website, we may earn a
+                commission.{' '}
+                <Link href="https://techboomers.com/how-to-support-techboomers" color="secondary">
+                  <b>{`Learn More >`}</b>
+                </Link>
+              </p>
             </Grid>
             <Grid item md={6} xs={12}>
               <ImgBlock {...mapFluidImgBlockToProps(image)} loading="eager" height={400} />
