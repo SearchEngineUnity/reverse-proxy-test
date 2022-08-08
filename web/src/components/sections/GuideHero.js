@@ -25,14 +25,17 @@ function GuideHero({ h1, subtitle, date, image }) {
                   Last updated: {lastUpdatedDate.toLocaleDateString('en-US', options)}
                 </Box>
               )}
-              <p>
+              <Typography variant="body1">
                 <b>DISCLAIMER:</b> Techboomers independently reviews everything we recommend. When
                 you buy something after clicking on a link to another website, we may earn a
                 commission.{' '}
-                <Link href="https://techboomers.com/how-to-support-techboomers" color="secondary">
+                <Link
+                  href="https://techboomers.com/how-to-support-techboomers"
+                  style={{ color: 'black' }}
+                >
                   <b>{`Learn More >`}</b>
                 </Link>
-              </p>
+              </Typography>
             </Grid>
             <Grid item md={6} xs={12}>
               <ImgBlock {...mapFluidImgBlockToProps(image)} loading="eager" height={400} />
